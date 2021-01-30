@@ -1,0 +1,30 @@
+name: build-push-docker
+
+on:
+  push:
+    branches: master
+
+jobs:
+  multi:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v2
+      -
+        name: Login to DockerHub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      -
+        name: Build and push
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          file: ./Dockerfile
+          platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/ppc64le,linux/s390x
+          push: true
+          tags: |
+            iamhummingom/bitbucket-pipe-cfn-test:0.1.0
+            iamhummingom/bitbucket-pipe-cfn-test:latest
