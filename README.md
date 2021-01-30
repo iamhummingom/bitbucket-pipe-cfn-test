@@ -35,8 +35,8 @@ The following variables are required:
 | AWS_SECRET_ACCESS_KEY (*)            | AWS secret key. |
 | AWS_DEFAULT_REGION (*)               | The AWS region code (us-east-1, us-west-2, etc.) of the region containing the AWS resource(s). For more information, see [Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html) in the _Amazon Web Services General Reference_. |
 | TEMPLATE (*)                          | Filename of aws cloudformation yml. example : infra.yml |
-| BITBUCKET_REPO_SLUG (**)               | The operation to perform. Valid options are 'update' or 'alias'. |
-| BITBUCKET_DEPLOYMENT_ENVIRONMENT (**)  | Path to the zip file containing the function code. Required for 'update' |
+| BITBUCKET_REPO_SLUG (**)               | Bitbucket variable. |
+| BITBUCKET_DEPLOYMENT_ENVIRONMENT (**)  | Bitbucket variable. |
 
 _(*) = required variable. This variable needs to be specified always when using the pipe._
 _(**) = required variable. While using in bitbucket pipe, these will be automatically set while using step deployment. For local test, these needs to be set locally._
