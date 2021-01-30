@@ -66,6 +66,11 @@ script:
       AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
       TEMPLATE: 'infra.yml'
 ```
+## Dockerhub image
+```
+iamhummingom/bitbucket-pipe-cfn-test:0.1.0 
+iamhummingom/bitbucket-pipe-cfn-test:latest
+```
 
 ## Test locally
 In Docker file if you copy to a location (cfn-test), and if you have infra.yml in the current path, then with the below command you can test locally.
