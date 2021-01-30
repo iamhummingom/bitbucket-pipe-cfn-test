@@ -1,0 +1,12 @@
+  project:
+    name: $BITBUCKET_REPO_SLUG
+    regions:
+      - $AWS_DEFAULT_REGION
+  tests:
+    test-default:
+      regions:
+        - $AWS_DEFAULT_REGION
+      template: $TEMPLATE
+      parameters:
+        Environment: "$BITBUCKET_DEPLOYMENT_ENVIRONMENT"
+        Application : "$BITBUCKET_REPO_SLUG"
