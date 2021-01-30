@@ -17,6 +17,4 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_TOKEN }}
           push: true
-          tags: |
-            iamhummingom/bitbucket-pipe-cfn-test:0.1.0
-            iamhummingom/bitbucket-pipe-cfn-test:latest
+          tags: iamhummingom/bitbucket-pipe-cfn-test:0.1.0,iamhummingom/bitbucket-pipe-cfn-test:latest
