@@ -1,0 +1,20 @@
+name: bitbucket-pipe-cfn-test
+image: iamhummingom/bitbucket-pipe-cfn-test:0.1.0
+description: Bitbucket pipe to test your cloudformation script with taskcat
+category: Infra Test
+variables:
+  - name: AWS_ACCESS_KEY_ID
+    default: "$AWS_ACCESS_KEY_ID"
+  - name: AWS_SECRET_ACCESS_KEY
+    default: "$AWS_SECRET_ACCESS_KEY"
+  - name: AWS_DEFAULT_REGION
+    default: "$AWS_DEFAULT_REGION"
+repository: https://github.com/iamhummingom/bitbucket-pipe-cfn-test
+maintainer:
+  name: iamhummingom
+  website: https://github.com/iamhummingom
+tags:
+- cloudformation
+- test
+- taskcat
+- AWS
