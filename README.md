@@ -8,6 +8,12 @@ This pipe is for bitbucket deployment step.
       name: test
       deployment: tst
 ```
+Docker service is needed for taskcat, so in the bitbucket pipeline step it should be added.
+```
+          services:
+            - docker
+
+```
 
 ## YAML Definition
 Add the following snippet to the script section of your `bitbucket-pipelines.yml` file:
